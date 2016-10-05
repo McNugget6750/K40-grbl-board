@@ -43,7 +43,10 @@ Modify homing cycle:
 Invert spindle enable pin by enabling:
 #define INVERT_SPINDLE_ENABLE_PIN // Default disabled. Uncomment to enable.
 
-Remap spindle enable pin to pin D13 by enabling:
+Enable variable spindle speed if not done by default. This gives you hardware PWM on Pin D11.
+#define VARIABLE_SPINDLE // Default enabled. Comment to disable.
+
+Remap spindle enable pin to pin D13 by enabling (WARNING! WILL BE PULLED LOW BY BOOT LOADER DURING POWER UP! DEACTIVATE YOUR LASER DURING STARTUP OF BOARD IN ORDER TO PREVENT FULL POWER BURNS AT STARTUP.):
 #define USE_SPINDLE_DIR_AS_ENABLE_PIN // Default disabled. Uncomment to enable.
 
 

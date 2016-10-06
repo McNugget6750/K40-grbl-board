@@ -62,6 +62,8 @@ In file spindle_control.c I changed the PWM prescaler for the laser to make it m
 
 TCCRB_REGISTER = (TCCRB_REGISTER & 0b11111000) | 0x02; // set to 1/8 Prescaler
 
+to
+
 TCCRB_REGISTER = (TCCRB_REGISTER & 0b11111000) | 0x01; // set to No Prescaling
 
 

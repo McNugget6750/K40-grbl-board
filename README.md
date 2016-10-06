@@ -83,3 +83,10 @@ $122=1000.000 (z accel, mm/sec^2)
 $130=200.000 (x max travel, mm)
 $131=300.000 (y max travel, mm)
 $132=10.000 (z max travel, mm)
+
+
+Software to control the GRBL Laser for cutting
+==============================================
+I'm using dxf2gcode with the configurations and cource files included in this repository: https://sourceforge.net/projects/dxf2gcode
+I also use GRBL-Controller with the grbl configuration file included in this repository: http://zapmaker.org/projects/grbl-controller-3-0/
+My grbl works with relative coordinates. Please keep that in mind.

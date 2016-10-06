@@ -32,6 +32,15 @@ Requirements
 * 4x1 pin header or one of the original moshi stepper motor driver connectors
 
 
+Software to control the GRBL Laser for cutting
+==============================================
+I'm using dxf2gcode with the configurations and cource files included in this repository: https://sourceforge.net/projects/dxf2gcode
+
+I also use GRBL-Controller with the grbl configuration file included in this repository: http://zapmaker.org/projects/grbl-controller-3-0/
+
+My grbl works with relative coordinates. Please keep that in mind.
+
+
 GRBL Config Modifications
 =========================
 Modifications for config.h are required!
@@ -48,6 +57,10 @@ Enable variable spindle speed if not done by default. This gives you hardware PW
 
 Remap spindle enable pin to pin D13 by enabling (WARNING! WILL BE PULLED LOW BY BOOT LOADER DURING POWER UP! DEACTIVATE YOUR LASER DURING STARTUP OF BOARD IN ORDER TO PREVENT FULL POWER BURNS AT STARTUP.):
 #define USE_SPINDLE_DIR_AS_ENABLE_PIN // Default disabled. Uncomment to enable.
+
+In file spindle_control.c I changed the PWM prescaler for the laser to make it more precise and easier to control by changing line 94 from
+//TCCRB_REGISTER = (TCCRB_REGISTER & 0b11111000) | 0x02; // set to 1/8 Prescaler
+TCCRB_REGISTER = (TCCRB_REGISTER & 0b11111000) | 0x01; // set to No Prescaling
 
 
 GRBL Configuration that currently sort of works
@@ -113,12 +126,3 @@ $130=200.000 (x max travel, mm)
 $131=300.000 (y max travel, mm)
 
 $132=10.000 (z max travel, mm)
-
-
-Software to control the GRBL Laser for cutting
-==============================================
-I'm using dxf2gcode with the configurations and cource files included in this repository: https://sourceforge.net/projects/dxf2gcode
-
-I also use GRBL-Controller with the grbl configuration file included in this repository: http://zapmaker.org/projects/grbl-controller-3-0/
-
-My grbl works with relative coordinates. Please keep that in mind.

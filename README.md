@@ -34,9 +34,9 @@ Requirements
 
 Software to control the GRBL Laser for cutting
 ==============================================
-I'm using dxf2gcode with the configurations and source files included in this repository: https://sourceforge.net/projects/dxf2gcode
+I'm using dxf2gcode (with the configurations and source files included in this repository): https://sourceforge.net/projects/dxf2gcode
 
-I also use GRBL-Controller with the grbl configuration file included in this repository: http://zapmaker.org/projects/grbl-controller-3-0/
+I also use GRBL-Controller (with the grbl configuration file included in this repository): http://zapmaker.org/projects/grbl-controller-3-0/
 
 My grbl works with relative coordinates. Please keep that in mind.
 

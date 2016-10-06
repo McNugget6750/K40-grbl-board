@@ -60,7 +60,7 @@ Remap spindle enable pin to pin D13 by enabling (WARNING! WILL BE PULLED LOW BY 
 
 In file spindle_control.c I changed the PWM prescaler for the laser to make it more precise and easier to control by changing line 94 from
 
-//TCCRB_REGISTER = (TCCRB_REGISTER & 0b11111000) | 0x02; // set to 1/8 Prescaler
+TCCRB_REGISTER = (TCCRB_REGISTER & 0b11111000) | 0x02; // set to 1/8 Prescaler
 
 TCCRB_REGISTER = (TCCRB_REGISTER & 0b11111000) | 0x01; // set to No Prescaling
 

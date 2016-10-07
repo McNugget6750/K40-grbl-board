@@ -26,7 +26,7 @@ ALWAYS BE CAUTIOUS! ALWAYS WATCH YOUR MACHINE WHILE OPERATING IT!
 _**Requirements**_
 
 * an arduino nano w atmega328p loaded with grbl http://github.com/grbl/grbl
-* 2 Pololu A4988 Stepper motor drivers
+* 2 Pololu A4988 Stepper motor drivers with current limit set to ~1A (Vref=0.4V)
 * a ribbon connector from the original moshi board or this one: http://www.digikey.com/product-search/en?keywords=A100331-ND
 * a four pole power connector: MTA04-156 with this package: 1X4MTA
 * 4x1 pin header or one of the original moshi stepper motor driver connectors
@@ -91,8 +91,8 @@ $102=250.000 (z, step/mm)
 $110=12000.000 (x max rate, mm/min)
 $111=12000.000 (y max rate, mm/min)
 $112=12000.000 (z max rate, mm/min)
-$120=1000.000 (x accel, mm/sec^2)
-$121=1000.000 (y accel, mm/sec^2)
+$120=4000.000 (x accel, mm/sec^2)
+$121=4000.000 (y accel, mm/sec^2)
 $122=1000.000 (z accel, mm/sec^2)
 $130=200.000 (x max travel, mm)
 $131=300.000 (y max travel, mm)

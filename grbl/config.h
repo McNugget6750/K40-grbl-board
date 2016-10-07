@@ -180,7 +180,7 @@
 // Inverts the PWM value for the spindle PWM range. Usefull when driving certain lasers with inverted
 // power inputs. SEEMS NOT TO BE REQUIRED FPR K40 LASER!
 // BE CAREFULL USING THIS FUNCTION! IT IS UNTESTED AND NOT SAFE FOR GENERAL USE!!
-//#define INVERT_SPINDLE_PWM // Default is disabled. Uncomment to enable.
+// #define INVERT_SPINDLE_PWM // Default is disabled. Uncomment to enable.
 
 // Enable control pin states feedback in status reports. The data is presented as simple binary of
 // the control pin port (0 (low) or 1(high)), masked to show only the input pins. Non-control pins on the

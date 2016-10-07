@@ -1,5 +1,4 @@
-# K40-grbl-board
-
+_**K40-grbl-board**_
 A PCB layout and schematic.
 
 Made with Eagle PCB 7.4.0 Light
@@ -11,8 +10,7 @@ Please check for updates in the future.
 
 Based on schematics from https://github.com/txjammer (seems offline)
 
-DISCLAMER!
-==========
+_**DISCLAMER!**_
 USE AT YOU OWN RISK!
 I CANNOT BE MADE RESPONSIBLE FOR ANY PROBLEMS THAT MIGHT OCCUR WHILE USING THIS.
 THIS IS A HOBBY DEVELOPMENT AND NO TESTING HAS BEEN DONE TO ENSURE THE SAVETY OF ANY
@@ -23,17 +21,16 @@ YOUR LASER WILL EVENTUALLY BE ON FIRE! IT HAPPENED TO EVERYONE OF US BEFORE!
 ALWAYS BE CAUTIOUS! ALWAYS WATCH YOUR MACHINE WHILE OPERATING IT!
 
 
-Requirements
-============
+_**Requirements**_
 * an arduino nano w atmega328p loaded with grbl http://github.com/grbl/grbl
 * 2 Pololu A4988 Stepper motor drivers
 * a ribbon connector from the original moshi board or this one: http://www.digikey.com/product-search/en?keywords=A100331-ND
 * a four pole power connector: MTA04-156 with this package: 1X4MTA
 * 4x1 pin header or one of the original moshi stepper motor driver connectors
+* grbl form from here: https://github.com/McNugget6750/grbl
 
 
-Software to control the GRBL Laser for cutting
-==============================================
+_**Software to control the GRBL Laser for cutting**_
 I'm using dxf2gcode (with the configurations and source files included in this repository): https://sourceforge.net/projects/dxf2gcode
 
 I also use GRBL-Controller (with the grbl configuration file included in this repository): http://zapmaker.org/projects/grbl-controller-3-0/
@@ -41,8 +38,7 @@ I also use GRBL-Controller (with the grbl configuration file included in this re
 My grbl works with relative coordinates. Please keep that in mind.
 
 
-GRBL Config Modifications
-=========================
+_**GRBL Config Modifications**_
 Modifications for config.h are required!
 
 Modify homing cycle:
@@ -67,8 +63,7 @@ to
 TCCRB_REGISTER = (TCCRB_REGISTER & 0b11111000) | 0x01; // set to No Prescaling
 
 
-GRBL Configuration that currently sort of works
-===============================================
+_**GRBL Configuration that currently sort of works**_
 $0=10 (step pulse, usec)
 
 $1=25 (step idle delay, msec)
